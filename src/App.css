@@ -1,38 +1,163 @@
 .App {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+}
+
+.headerComponent {
+}
+
+.header-h1 {
+  text-align: left;
+  font-weight: 700;
+  color: #5153ff;
+}
+
+.balanceComponent {
+  margin-top: 15px;
+  padding: 15px 0px;
+}
+
+.balance-h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.balance-h1 {
+  font-weight: 700;
+}
+
+.account-component{
+  margin-top: 25px;
+  background-color: #fff;
+  box-shadow: 1px 1px 8px  #888888;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.account-component-h2-wrapper {
+  padding: 25px;
+}
+
+.account-component-h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.account-component-p {
+  font-size: 20px;
+  line-height: 1.9;
+  text-align: center;
+  font-weight: 400;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.income {
+  color: #1ace1a;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.expense {
+  color: #ff0000;
+}
+
+.translist-component {
+
+  margin-top: 30px;
+}
+
+.translist-component-h2-wrapper {
+  border-bottom: 2px solid #ccc;
+}
+
+.translist-component-h2 {
+  line-height: 1.9;
+  text-transform: uppercase;
+}
+
+.listItem-component{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px #888888;
+  position: relative;
+  border-radius: 0px 10px 10px 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.border-income {
+  border-right: 5px solid #1ace1a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.border-expense {
+  border-right: 5px solid #ff0000;
+}
+
+.delBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-100%, 20%);
+  background-color: #ccc;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out
+}
+.delBtn:hover {
+  color: #fff;
+}
+
+.listItem-component:hover .delBtn {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.addTrans-component {
+  margin-top: 30px;
+}
+
+.addTrans-form-wrapper {
+  margin-top: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  width: 100%;
+  line-height: 2;
+}
+
+.form-input {
+  width: 100%;
+  line-height: 2;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc
+}
+
+.submitBtn {
+  background-color: #5153ff;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+
+@media (min-width: 400px) {
+
+  .account-component {
+    flex-direction: row;
   }
 }
